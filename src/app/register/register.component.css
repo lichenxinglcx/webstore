@@ -1,0 +1,109 @@
+/* register */
+
+
+#reg{
+    font-size: 45px;
+    font-weight: 500;
+    margin:50px 0 20px 505px;
+}
+
+#birth{
+    margin:15px 0 15px 300px;
+}
+
+.contain input{
+    padding: 0 15px;
+    border-radius: 0;
+    border: 1px solid black;
+    height: 60px;
+}
+
+.contain select{
+    padding: 0 15px;
+    border-radius: 0;
+    border: 1px solid black;
+    height: 60px;
+    width: 190px;
+    color: black;
+}
+
+#selectyear{
+    margin-left: 300px;
+}
+
+#selectmonth{
+    margin-left: 30px;
+}
+
+#selectday{
+    margin-left: 30px;
+}
+
+#newemail{
+    width: 300px;
+    margin-left:300px;
+    margin-bottom: 0px;
+}
+
+#newname{
+    width: 300px;
+    margin-left:30px;
+    margin-bottom: 0px;
+}
+
+#newpassword{
+    width: 630px;
+    margin-left:300px;
+    margin-bottom: 0px;
+}
+
+#newtel{
+    width: 630px;
+    margin-left:300px;
+}
+
+.contain button{
+    background-color: black;
+    color: #fff;
+    height: 60px;
+    width: 630px;
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+.contain button:hover{
+    background-color: rgb(22, 21, 21);
+    color: #fff;
+}
+
+/* 错误信息提示 */
+#emailerror1,#passworderror1,#telerror1,#emailerror2,#passworderror2,#telerror2{
+    width:300px;
+    margin-left: 300px;
+    height: 10px;
+}
+
+#nameerror1,#nameerror2{
+    width:300px;
+    margin-right: 320px;
+    height: 10px;
+}
+
+#emailerror1,#passworderror1,#telerror1,#nameerror1,
+#emailerror2,#passworderror2,#telerror2,#nameerror2{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+#emailcorrect,#passwordcorrect,#telcorrect{
+    width:300px;
+    margin-left: 300px;
+    height: 10px;
+}
+
+#namecorrect{
+    width:300px;
+    margin-right: 320px;
+    height: 10px;
+}

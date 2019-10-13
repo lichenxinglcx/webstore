@@ -1,0 +1,20 @@
+<div class="w">
+  <p id="title">热门双人床</p>
+  <div class="flex">
+    <div *ngFor="let good of goods;let i=index;">
+      <div class="details">
+          <div class="label">{{good.goods_name}}</div>
+          <div class="img">
+            <a [routerLink]="['/details']" >
+              <img src="{{good.front_cover}}" (click)="changeGoods(i)">
+            </a>
+          </div>
+          <div class="price">
+            <p class="fl">类型:{{ good.goods_class_name }}</p>
+            <p class="fl" style="margin-left: 10px;">{{ good.introduction}}</p>
+            <p class="fr">价格:{{ good.price }}￥</p>
+          </div>
+      </div>
+    </div>
+  </div> 
+</div>

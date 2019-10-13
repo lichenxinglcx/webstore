@@ -1,0 +1,149 @@
+<header>
+  <div class="navbar1" onmouseover="hidedetails();">
+    <div class="logo1 fl">
+      <a href="" [routerLink]="['/mainpage']"><img src="../../assets/img/logo2.1.png"></a>
+    </div>
+    <div class="nav fl">
+      <ul>
+        <li onmouseover="showInform1();" onmouseout="hiddenInform1();" >
+          <a>热门</a>
+        </li>
+        <li>
+          <a>推荐</a>
+        </li>
+        <li onmouseover="showInform2();" onmouseout="hiddenInform2();">
+          <a>新品</a>
+        </li>
+        <li onmouseover="showInform3();" onmouseout="hiddenInform3();">
+          <a>分类</a>
+        </li>
+        <li class="btn-group">
+          <a class="dropdown-toggle dropdown-button" data-toggle="dropdown">更多
+            <i class="caret"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#">特色一</a></li>
+            <li class="dropdown-item"><a href="#">特色二</a></li>
+            <li class="dropdown-item"><a href="#">特色三</a></li>
+            <li class="dropdown-item"><a href="#">特色四</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="logo2 fl">
+      <ul>
+        <li onclick="showsearch();">
+          search
+        </li>
+        <li onclick="showlogin();" >
+          login
+        </li>
+        <li onclick="showshopcar()">
+          car
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</header>    
+
+<div id="hovermenu1" onmouseover="showInform1();"  onmouseout="hiddenInform1(event);">
+<div class="imageitem fl">
+  <a href="" [routerLink]="['/detailpage']" onclick="hiddenInform1();">
+    <img src="../../assets/img/doublebed1.png" alt="加载中..." class="img-thumbnail">
+  </a>
+</div>
+<div class="imageitem fl">
+  <a href="" [routerLink]="['/detailpage3']" onclick="hiddenInform1();">
+    <img src="../../assets/img/childdouble1.jpeg" alt="加载中..." class="img-thumbnail">
+  </a>
+</div>
+<div class="imageitem fl">
+  <a href="" [routerLink]="['/detailpage4']" onclick="hiddenInform1();">
+    <img src="../../assets/img/closet3.jpg" alt="加载中..." class="img-thumbnail">
+  </a>
+</div> 
+</div>
+
+<div id="hovermenu2" onmouseover="showInform2();"  onmouseout="hiddenInform2();">
+<div class="imageitem fl">
+  <a href="" [routerLink]="['/detailpage2']" onclick="hiddenInform2();">
+    <img src="../../assets/img/childbed1.jpg" alt="加载中..." class="img-thumbnail">
+  </a>
+</div>
+<div class="imageitem fl">
+  <a href="" [routerLink]="['/detailpage5']" onclick="hiddenInform2();">
+    <img src="../../assets/img/sofa1.jpg" alt="加载中..." class="img-thumbnail">
+  </a>
+</div>
+</div>
+
+<div id="hovermenu3" onmouseover="showInform3();"  onmouseout="hiddenInform3(event);">
+  <ul>
+    <li onmouseover="showdetail1();">
+      <a>床</a>
+    </li>
+    <li onmouseover="showdetail2();">
+      <a>桌椅</a>
+    </li>
+    <li onmouseover="showdetail3();">
+      <a>沙发</a>
+    </li>
+    <li onmouseover="showdetail4();">
+      <a>柜子</a>
+    </li>
+  </ul>
+</div>
+
+<div id="detail1" onmouseover="showInform3();" onmouseout="hidedetail1();">
+  <ul>
+    <li onmouseover="showdetail1();"><a href="">双人床</a></li>
+    <li onmouseover="showdetail1();"><a href="">儿童床</a></li>
+    <li onmouseover="showdetail1();"><a href="">双层床</a></li>
+  </ul>
+</div>
+
+<div id="detail2" onmouseover="showInform3();" onmouseout="hidedetail2();">
+    <ul>
+        <li onmouseover="showdetail2();"><a href="">桌子</a></li>
+        <li onmouseover="showdetail2();"><a href="">椅子</a></li>
+    </ul>
+</div>
+
+<div id="detail3" onmouseover="showInform3();" onmouseout="hidedetail3();">
+    <ul>
+        <li onmouseover="showdetail3();"><a href="">皮质沙发</a></li>
+        <li onmouseover="showdetail3();"><a href="">布艺沙发</a></li>
+    </ul>
+</div>
+
+<div id="detail4" onmouseover="showInform3();" onmouseout="hidedetail4();">
+    <ul>
+        <li onmouseover="showdetail4();"><a href="">衣柜</a></li>
+        <li onmouseover="showdetail4();"><a href="">床头柜</a></li>
+        <li onmouseover="showdetail4();"><a href="">橱柜</a></li>
+    </ul>
+</div>
+
+<div id="bg">  
+</div> 
+
+<div id="searcharea">
+<div><input type="text" class="form-control" id="searchsometing" placeholder="输入搜索词"></div>
+<a onclick="hidesearch();">X</a>
+</div>
+
+<div id="loginarea">
+  <router-outlet name="aux2"></router-outlet>
+</div>
+
+<div id="shopcararea">
+  <router-outlet name="aux3"></router-outlet>
+</div>
+
+
+
+
+
+
+

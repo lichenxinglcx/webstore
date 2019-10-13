@@ -1,0 +1,72 @@
+<div class="information w d-flex">
+  <div id="infarea">
+      <p id="infp">账户信息</p>
+      <p class="p">性别:</p>
+      <p class="s">{{showinformation.sex}}</p>
+      <p class="p">名称:</p>
+      <p class="s">{{showinformation.username}}</p>
+      <p class="p">手机号:</p>
+      <p class="s">{{showinformation.phone}}</p>
+      <p class="p">电子邮件:</p>
+      <p class="s">{{showinformation.email}}</p>
+      <p class="p">您的生日:</p>
+      <p class="s">{{showinformation.year}} - {{showinformation.month}} - {{showinformation.day}}</p>
+  </div>
+  <div id="editarea">
+      <p id="editorp">编辑</p>
+      <form [formGroup]="userinformation">
+          <p>性别:</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sex" id="sexRadio1" value="男" checked="true" formControlName="sex">
+            <label class="form-check-label" for="inlineRadio1">男士</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sex" id="sexRadio2" value="女" formControlName="sex">
+            <label class="form-check-label" for="inlineRadio2">女士</label>
+          </div>
+          <p>名称:</p>
+          <input type="text" class="form-control" id="nameinf" placeholder="name" formControlName="username">
+          <div *ngIf="userinformation.get('username').invalid && (userinformation.get('username').dirty || userinformation.get('username').touched)" class="nameerror">
+                  <div *ngIf="userinformation.get('username').errors.required">名称不能为空</div>
+                  <div *ngIf="userinformation.get('username').errors.maxlength">名称不得多于十位</div>
+          </div>
+          <p>手机号:</p>
+          <input type="text" class="form-control" id="telinf" placeholder="telephone" formControlName="phone">
+          <div *ngIf="userinformation.get('phone').invalid && (userinformation.get('phone').dirty || userinformation.get('phone').touched)" class="telephoneerror">
+              <div *ngIf="userinformation.get('phone').errors.required">手机号不能为空</div>
+              <div *ngIf="userinformation.get('phone').errors.pattern">手机号格式错误</div>
+          </div>
+          <p>电子邮件:</p>
+          <input type="text" class="form-control" id="emailinf" placeholder="email" formControlName="email">
+          <div *ngIf="userinformation.get('email').invalid && (userinformation.get('email').dirty || userinformation.get('email').touched)" class="telephoneerror">
+              <div *ngIf="userinformation.get('email').errors.required">邮箱不能为空</div>
+              <div *ngIf="userinformation.get('email').errors.pattern">邮箱格式错误</div>
+          </div>
+          <p>您的生日:</p>
+          <select class="custom-select fl" id="yearinf" formControlName="year">
+              <option selected>年</option>
+              <option value="1990">1990</option>
+              <option value="1991">1991</option>
+              <option value="1992">1992</option>
+              <option value="1993">1993</option>
+              <option value="1994">1994</option>
+              <option value="1995">1995</option>
+              <option value="1996">1996</option>
+          </select>
+          <select class="custom-select fl" id="monthinf" formControlName="month">
+              <option selected>月</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+          </select>
+          <select class="custom-select fl" id="dayinf" formControlName="day">
+              <option selected>日</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+          </select>
+          <button type="button" class="btn" (click)="updateUser()">提交</button>
+        </form>
+  </div>
+</div>
+

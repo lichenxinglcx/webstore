@@ -1,0 +1,57 @@
+#cart{
+    margin: 10px 10px 0 25px;
+}
+
+.img{
+    width: 100px;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+#detail{
+    margin-left: 40px;
+}
+
+#num{
+    margin-left: 40px;
+}
+
+#close{
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.closebutton{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    display: block;
+} 
+
+
+.show{
+    position: relative;
+    /* overflow:hidden; */
+    height: 250px;
+    overflow: auto; 
+    overflow: scroll; 
+	overflow-x: hidden; 
+    overflow-y: scroll;
+
+}
+
+.itemcontain{
+    position: absolute;
+}
+
+.enter{
+    color: black !important;
+
+}
+

@@ -1,0 +1,66 @@
+.nav-inf{
+    width: 100%;
+    height: 250px;
+    background-color:  rgb(34, 34, 34);
+}
+
+.inf-intro{
+    padding: 10px 0;
+}
+
+.inf-intro p{
+    margin-left: 15px;
+    color: #fff;
+}
+
+.inf-intro a{
+    color:#fff !important;
+    display: block;
+    margin: 10px 0 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.inf-intro a:hover{
+    text-decoration: underline !important;
+}
+
+.headimg{
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    margin: 20px 0 5px 80px;
+    border-radius: 10px;
+}
+
+.headimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#upload{
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left:80px;
+}
+
+.welcome{
+    width: 390px;
+    height: 230px;
+    border-right: 1px solid #fff;
+}
+
+.myinf{
+    width: 390px;
+    height:230px; 
+    border-right: 1px solid #fff;
+}
+
+.myorder{
+    width: 390px;
+    height:230px; 
+}
+
+

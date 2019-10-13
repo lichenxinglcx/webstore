@@ -1,0 +1,80 @@
+<div class="w">
+  <p id="carttitle">购物车</p>
+  <div>
+      <table class="table">
+          <thead>
+            <tr>
+              <th>产品</th>
+              <th>价格</th>
+              <th>数量</th>
+              <th>总计</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of carts;let i=index;">
+            <tr>
+              <td id="t1">
+                <div class="d-flex">
+                    <div class="good_pic">
+                        <a href="#"><img src="{{item.front_cover}}"></a>
+                    </div>
+                    <div class="good_detail">
+                      <p>{{item.goods_name}}</p>
+                      <a (click)="remove(i)">移除</a>
+                    </div>
+                </div>
+              </td>
+              <td id="t2">
+                  <p class="price">{{item.price}}￥</p>
+              </td>
+              <td id="t3">
+                <div id="t3_input">
+                  <form [formGroup]="num">
+                      <input type="number" class="number" value="{{item.num}}" (click)="autoChange(i)" (blur)="autoChange(i)" formControlName="num">
+                  </form>
+                </div>
+              </td>
+              <td id="t4">
+                <div>
+                    <p class="sum">总计：{{item.price*item.num}}￥</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+      <button class="buy fr" data-toggle="modal" data-target="#myModal">购买</button>
+
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <div class="modal-title">确认购买</div>
+                <button class="close" data-dismiss="modal">X</button>
+            </div>
+            <div class="dropdown">
+              <!-- <button (click)="getAddresses()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  选择收货地址
+              </button> -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="address"></div>
+              <!-- <p id="detials-address"></p> -->
+              <p style="margin-left: 20px;margin-bottom:10px;">选择收货地址</p>
+              <form [formGroup]="address1">
+                      <select class="custom-select address" formControlName="address">
+                              <option>请选择地址</option>
+                              <option value="{{address.province}} - {{address.city}} - {{address.district}}" *ngFor="let address of addressesList">{{address.province}} - {{address.city}} - {{address.district}}</option>
+                      </select>
+              </form>
+            </div>
+ 
+            <div class="modal-body">
+              <p>总价为:{{sum}}￥</p>
+            </div>
+ 
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" (click)="postOrder()">yes</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+

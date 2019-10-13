@@ -1,0 +1,10 @@
+  <p id="p1">用户登录<a onclick="hidelogin();">X</a></p>
+  <p id="p2">没有账号？<a [routerLink]="['/register']" onclick="hidelogin();">注册</a></p>
+  <div class="formarea">
+    <form [formGroup]="userlogin">
+        <input type="email" class="form-control" id="email" placeholder="email" formControlName="email">   
+        <input type="password" class="form-control" id="password" placeholder="password" formControlName="password">
+        <p id="p3"><a href="">忘记密码？</a></p>
+        <button id="loginbtn" type="button" class="btn" onclick="hidelogin();" (click)="login()">登录</button>
+    </form>
+  </div>

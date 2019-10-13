@@ -1,0 +1,350 @@
+ul li{
+    list-style: none;
+}
+/* star */
+#star{
+    position:relative;
+    width:600px;
+    margin:20px auto;
+    height:24px;
+}
+#star ul,#star span{
+    display:inline;
+    line-height:19px;
+}
+#star ul{
+    margin:0 10px;
+}
+#star li{
+    float:left;
+    overflow: hidden;
+    width:40px;
+    cursor:pointer;
+}
+.star-png{
+    width: 40px;
+    height: 40px;
+}
+#star strong{
+    color:#f60;
+    padding-left:10px;
+}
+#star li.on{
+    background-position:0 -28px;
+}
+#star p{
+    position:absolute;
+    top:20px;width:159px;
+    height:60px;
+    display:none;
+    /* background:url(img/icon.gif) no-repeat; */
+    padding:7px 10px 0;
+}
+#star p em{
+    color:#f60;
+    display:block;
+    font-style:normal;
+}
+.contain{
+    width: 80%;
+    margin: auto;
+}
+
+#dropdownMenuButton{
+    margin-left: 3rem;
+}
+.color{
+    width: 13rem;
+    height: 4rem;
+    margin-bottom: 0.2rem;
+    margin-left: 2.5rem;
+}
+#color-prev{
+    margin-left: 2.5rem;
+    width: 13rem;
+    height: 2rem;  
+}
+#color-next{
+    margin-top: 0rem;
+    margin-left: 2.5rem;
+    width: 13rem;
+    height: 2rem;  
+}
+#color1{
+    margin-top: 1rem;
+    background-color: blueviolet;
+}
+#color2{
+    background-color: rgb(66, 179, 255);
+}
+#color3{
+    background-color: rgb(214, 216, 96);
+}
+#color4{
+    background-color: rgb(43, 226, 104);
+}
+#color5{
+    background-color: rgb(235, 91, 211);
+}
+#color6{
+    background-color: rgb(236, 165, 11);
+}
+#recommend{
+    margin-top: 6rem;
+    text-align: center;
+}
+#recommend1{
+    width: 280px;
+    text-align:center;
+}
+.table{
+    margin-top: 3rem;
+}
+#comment{
+    margin-top: 6rem;
+    text-align: center;
+}
+.tiaotiao{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: rgba(230, 230, 230, 0.527)
+}
+#tiaotiao5{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao4{
+    width: 25%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao3{
+    width: 12.5%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao2{
+    width: 5%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao1{
+    width: 7.5%;
+    height: 100%;
+    background-color: black;
+}
+#class{
+    margin-top: 4rem;
+}
+#star_{
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+#advantage{
+    margin-left: 8rem;
+}
+#score{
+    margin-left: 8rem;
+}
+#s{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+#recall{
+    width: 8rem;
+    margin-top: 2.5rem;
+}
+ul li{
+    list-style: none;
+}
+.wenli{
+    width: 13rem;
+    height: 8rem;
+    margin-left: 2.5rem;
+}
+#wenlipicture1{
+    width: 100%;
+    height: 100%;
+}
+
+.collapse:focus{
+    outline: none !important;
+}
+
+*{
+    list-style-type:none;
+}
+
+#decription{
+    margin-left: 3rem;
+}
+
+.image{
+    width: 500px;
+    height: 500px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+#color{
+    padding-left: 2rem;
+    padding-top: 0.25rem;
+}
+.modal-content{
+    background-color: rgba(255, 255, 255, 0.85)
+}
+.modal-title{
+    padding-left: 2.4rem;
+}
+#dropdownMenuButton{
+    margin-left: 0;
+    width: 10rem;
+}
+#detials-name{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    width: 88%;
+    height: 3rem;
+    background-color: rgb(236, 221, 200, 0.651);
+}
+#detials-type{
+    padding-left: 1rem;
+    padding-top: 0.4rem;
+    width: 88%;
+    height: 2rem;
+    background-color: rgb(151, 240, 128, 0.651);
+}
+#detials-color{
+    padding-left: 1rem;
+    padding-top: 0.4rem;
+    width: 88%;
+    height: 2rem;
+    background-color: rgb(255, 176, 72, 0.651);
+}
+#detials-price{
+    padding-left: 1rem;
+    padding-top: 0.4rem;
+    width: 88%;
+    height: 2rem;
+    background-color: rgb(255, 151, 168, 0.651);
+}
+
+/* star */
+#star{
+    position:relative;
+    width:600px;
+    margin:20px auto;
+    height:24px;
+}
+#star ul,#star span{
+    display:inline;
+    line-height:19px;
+}
+#star ul{
+    margin:0 10px;
+}
+#star li{
+    float:left;
+    overflow: hidden;
+    width:40px;
+    cursor:pointer;
+}
+.star-png{
+    width: 40px;
+    height: 40px;
+}
+#star strong{
+    color:#f60;
+    padding-left:10px;
+}
+#star li.on{
+    background-position:0 -28px;
+}
+#star p{
+    position:absolute;
+    top:20px;width:159px;
+    height:60px;
+    display:none;
+    /* background:url(img/icon.gif) no-repeat; */
+    padding:7px 10px 0;
+}
+#star p em{
+    color:#f60;
+    display:block;
+    font-style:normal;
+}
+#comment{
+    margin-top: 6rem;
+    text-align: center;
+}
+.tiaotiao{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: rgba(230, 230, 230, 0.527)
+}
+#tiaotiao5{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao4{
+    width: 25%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao3{
+    width: 12.5%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao2{
+    width: 5%;
+    height: 100%;
+    background-color: black;
+}
+#tiaotiao1{
+    width: 7.5%;
+    height: 100%;
+    background-color: black;
+}
+#class{
+    margin-top: 4rem;
+}
+#star_{
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+#advantage{
+    margin-left: 8rem;
+}
+#score{
+    margin-left: 8rem;
+}
+#s{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+#recall{
+    width: 8rem;
+    margin-top: 2.5rem;
+}
+
+.commentarea{
+    width: 100%;
+}
+.commentsub{
+    width: 100px;
+    widows: 50px;
+}
+
+.add{
+    margin-left: 15px;
+}

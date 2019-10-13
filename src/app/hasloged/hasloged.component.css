@@ -1,0 +1,31 @@
+#closediv{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+#title{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p{
+    margin-bottom: 7px !important;
+    margin-left: 10px;
+}
+
+p a{
+    color: black;
+    font-size: 13px;
+}
+
+#close{
+    margin: 5px 10px 10px 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#foot{
+    font-size: 25px;
+    font-weight: 500;
+}

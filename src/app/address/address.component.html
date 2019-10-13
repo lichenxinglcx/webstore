@@ -1,0 +1,79 @@
+<div class="w adress">
+  <p id="addresstitle">我的地址</p>
+  <div class="addressarea">
+    <div id="myaddress">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>省份</th>
+                <th>市</th>
+                <th>区</th>
+                <th>详细地址</th>
+                <th>手机号</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let add of newaddress;let i=index;">
+              <tr>
+                <td>
+                  <p>{{add.province }}</p>
+                </td>
+                <td>
+                    {{add.city }}
+                </td>
+                <td>
+                    {{add.district}}
+                </td>
+                <td>
+                    {{add.detail }}
+                </td>
+                <td>
+                    {{add.phone }}
+                </td>
+                <td>
+                    <button class="delete" (click)="deleteAddress(i)">删除</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="addbtn" data-toggle="modal" data-target="#myModal">添加地址</button>
+ 
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <div class="modal-title">添加地址</div>
+                <button class="close" data-dismiss="modal">X</button>
+            </div>
+ 
+            <div class="modal-body">
+              <form [formGroup]="address">
+                  <select class="custom-select province" formControlName="province" (click)="postProvince()">
+                      <option selected>省</option>
+                      <option value="湖北省">湖北省</option>
+                      <option value="河南省">河南省</option>
+                      <option value="湖南省">湖南省</option>
+                  </select>
+                  <select class="custom-select city" formControlName="city" (click)="postCity()">
+                      <option selected *ngFor="let city of showcity" value="{{city}}">{{city}}</option>
+                  </select>
+                  <select class="custom-select district1" formControlName="district">
+                      <option selected *ngFor="let district of showdistrict" value="{{district}}">{{district}}</option>
+                  </select>
+                  <input class="detail" placeholder="详细地址" formControlName="detail">
+                  <input class="name" placeholder="收件人姓名" formControlName="name">
+                  <input class="contact" placeholder="手机号" formControlName="phone">
+              </form>
+            </div>
+ 
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" (click)="postAddress()">yes</button>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+

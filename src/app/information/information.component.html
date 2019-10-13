@@ -1,0 +1,24 @@
+<div class="nav-inf">
+  <div class="inf-intro w">
+    <div class="welcome fl">
+      <div class="headimg">
+        <img src="../../assets/img/head.jpg" id="headimage">
+      </div>
+      <input type="file"  style="display:none" id="uploadfile" accept="image/*"/>
+      <a id="upload">上传图片</a>
+    </div>
+    <div class="myinf fl">
+      <p>我的账户</p>
+      <a [routerLink]="['./personinf']">账户信息</a>
+      <a [routerLink]="['./address']">地址簿</a>
+      <a>退出</a>
+    </div>
+    <div class="myorder fl">
+      <p>我的订单</p>
+      <a [routerLink]="['./order']">订单详情</a>
+    </div>
+  </div> 
+</div>
+<router-outlet></router-outlet>
+
+

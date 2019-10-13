@@ -1,0 +1,45 @@
+<div class="w order">
+    <p>我的订单</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>订购日期</th>
+            <th>订单号</th>
+            <th>订单状态</th>
+            <th>商品名称/数量</th>
+            <th>总金额</th>
+            <th>顾客名称</th>
+            <th>顾客手机号</th>
+            <th>配送地址</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let order of orders">
+          <tr>
+            <td>
+                {{ order.pay_time }}
+            </td>
+            <td>
+                {{ order.express_num }}
+            </td>
+            <td>
+                {{order.status}}
+            </td>
+            <td>
+                {{ order.goods_name }}/{{ order.num}}
+            </td>
+            <td>
+                {{ order.price }}
+            </td>
+            <td>
+                {{ order.username}}
+            </td>
+            <td>
+                {{ order.phone}}
+            </td>
+            <td>
+                {{ order.address}}
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>

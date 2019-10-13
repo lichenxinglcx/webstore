@@ -1,0 +1,19 @@
+<div id="cart">
+  <div class="closebutton">
+      <a id="close" onclick="hidecart();" class="fr">X</a>
+  </div>
+  <div class="show">
+    <a href="" [routerLink]="['/cart']" onclick="hidecart();" class="enter">购物车>></a>
+    <div class="itemcontain">
+        <div class="d-flex" *ngFor="let item of carts;let i=index;" style="margin-bottom:10px;">
+            <div class="img">
+                <img src="{{item.front_cover}}">
+            </div>
+            <p id="detail">{{item.goods_name}}</p>
+            <p id="num">{{item.num}}</p>
+        </div>
+      
+    </div>
+    
+  </div>
+</div>

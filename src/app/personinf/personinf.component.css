@@ -1,0 +1,74 @@
+#infp{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 0 10px;
+}
+
+#editorp{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 0 10px;
+}
+
+.p{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 20px 0 20px 10px;
+}
+
+.s{
+    font-size: 20px;
+    font-weight: 400;
+    margin:0 0 0 10px;
+}
+
+#infarea{
+    width: 900px;
+}
+
+.information form p{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 0 10px;
+}
+
+#sexRadio1,#sexRadio2{
+    margin:auto 10px;
+    width: 20px !important;
+}
+
+.information input{
+    margin: 10px 0 10px 10px;
+    width: 600px;
+    height: 60px;
+    padding:0 10px;
+    border:1px solid black;
+    border-radius: 0;
+}
+
+.information select{
+    margin: 10px 0 0 10px;
+    padding: 0 10px;
+    width: 193px;
+    height: 60px;
+    border:1px solid black;
+    border-radius: 0;
+}
+
+
+.information button{
+    margin:20px 0 20px 10px;
+    width: 600px;
+    height: 60px;
+    background-color: black;
+    color: #fff;
+}
+
+.information button:hover{
+    background-color: rgb(22, 21, 21);
+}
+
+.nameerror,.telephoneerror{
+    margin: 5px 0 5px 15px;
+    color: red;
+}

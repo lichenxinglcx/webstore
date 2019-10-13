@@ -1,0 +1,254 @@
+
+      <div class="contain">
+        <!-- 面包屑导航 -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">卧室</a></li>
+                <li class="breadcrumb-item"><a href="#">床</a></li>
+                <li class="breadcrumb-item active" aria-current="page">高雅奢靡单品</li>
+            </ol>
+        </nav> 
+
+        <!-- 商品详情 -->
+        <div class="details">
+            <div class="d-flex">
+                <!-- 商品详情图 -->
+              <div class="image">
+                  <img src="{{thisgood.front_cover}}" alt="商品详情图">
+              </div>
+              <!-- 商品简介＋评分+加入购物车+下单按钮 -->
+              <div id="decription">
+                  <!-- 商品名称 -->
+                  <div>
+                      <h2>{{thisgood.goods_name}}</h2>
+                      <a href="#">完整描述</a>
+                  </div>
+                  <hr>
+                  <!-- 材质选择 -->
+                  <div class="d-flex">
+                      <h4>{{thisgood.introduction}}</h4>
+                  </div>
+                  <hr>
+                  <!-- 简单描述+评分+评论 -->
+                  <div>
+                      <p>There are some sample descriptive sentences to the commodity. </p>
+                      <h4>整体评分：4.5/5</h4>
+                      <a href="details#comment_" target="_self">看看别人怎么说</a>
+                  </div>
+                  <hr>
+                  <!-- 价格+下单+加购物车 -->
+                  <div>
+                      <h3>￥ {{thisgood.price}}</h3>
+                      <button class="btn btn-warning" data-toggle="modal" data-target="#ordermodal" type="button">我现在就要拥有！</button>
+                      <!-- 下单模态框 -->
+                      <!-- 下单模态框 -->
+                      <div class="modal fade" id="ordermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">新建订单</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul id="details">
+                                        <li>
+                                            <h4 id="detials-name">{{thisgood.goods_name}}</h4>
+                                        </li>
+                                        <li>
+                                            <h6 id="detials-type">{{thisgood.introduction}}</h6>
+                                        </li>
+                                        <li>
+                                            <h6 id="detials-price">￥ {{thisgood.price}}</h6>
+                                        </li>
+                                        <div class="dropdown">
+                                            <!-- <button (click)="getAddresses()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                选择收货地址
+                                            </button> -->
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="address"></div>
+                                            <!-- <p id="detials-address"></p> -->
+                                            <form [formGroup]="address1">
+                                                    <select class="custom-select address" formControlName="address">
+                                                            <option>请选择地址</option>
+                                                            <option value="{{address.province}} - {{address.city}} - {{address.district}}" *ngFor="let address of addressesList">{{address.province}} - {{address.city}} - {{address.district}}</option>
+                                                    </select>
+                                            </form>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary" id="confirm_btn" data-dismiss="modal" (click)="postOrder()">确认订单</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <button class="btn btn-warning add" type="button" (click)="addtoCart()">先加入购物车吧</button>
+                      <!-- 反馈加入购物车是否成功的模态框 -->
+                  </div>
+              </div>
+            </div>
+            
+
+        <!-- 推荐配合使用 -->
+        <div id="recommend">
+            <h2>推荐配合使用</h2>
+            <div>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div id="recommend1">
+                                <h4>推荐使用商品名称1</h4>
+                                <div class="d-flex">
+                                    <img src="https://picsum.photos/200/200?random&t=${Math.random()}" alt="推荐使用的商品1">
+                                    <button class="btn btn-warning" type="button">查看详情</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="recommend1">
+                                <h4>推荐使用商品名称2</h4>
+                                <div class="d-flex">
+                                    <img src="https://picsum.photos/200/200?random&t=${Math.random()}" alt="推荐使用的商品1">
+                                    <button class="btn btn-warning" type="button">查看详情</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="recommend1">
+                                <h4>推荐使用商品名称3</h4>
+                                <div class="d-flex">
+                                    <img src="https://picsum.photos/200/200?random&t=${Math.random()}" alt="推荐使用的商品1">
+                                    <button class="btn btn-warning" type="button">查看详情</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="recommend1">
+                                <h4>推荐使用商品名称4</h4>
+                                <div class="d-flex">
+                                    <img src="https://picsum.photos/200/200?random&t=${Math.random()}" alt="推荐使用的商品1">
+                                    <button class="btn btn-warning" type="button">查看详情</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="comment">
+            <h2 id="comment_">商品评论</h2>
+            <div class="d-flex" id="class">
+                <div id="star_">
+                    <ul>
+                        <li class="d-flex">
+                            <h6>5星</h6>
+                            <div class="tiaotiao">
+                                <div id="tiaotiao5"></div>
+                            </div>
+                            <p>20</p>
+                        </li>
+                        <li class="d-flex">
+                            <h6>4星</h6>
+                            <div class="tiaotiao">
+                                <div id="tiaotiao4"></div>
+                            </div>
+                            <p>10</p>
+                        </li>
+                        <li class="d-flex">
+                            <h6>3星</h6>
+                            <div class="tiaotiao">
+                                <div id="tiaotiao3"></div>
+                            </div>
+                            <p>5</p>
+                        </li>
+                        <li class="d-flex">
+                            <h6>2星</h6>
+                            <div class="tiaotiao">
+                                <div id="tiaotiao2"></div>
+                            </div>
+                            <p>2</p>
+                        </li>
+                        <li class="d-flex">
+                            <h6>1星</h6>
+                            <div class="tiaotiao">
+                                <div id="tiaotiao1"></div>
+                            </div>
+                            <p>3</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="advantage">
+                    <h4>优点</h4>
+                    <ul>
+                        <li><p>质量良好（20）</p></li>
+                        <li><p>高端大气（18）</p></li>
+                        <li><p>朋友羡慕（8）</p></li>
+                        <li><p>高端大气（18）</p></li>
+                        <li><p>优雅（18）</p></li>
+                    </ul>
+                </div>
+                <div id="score">
+                    <h4>商品评分</h4>
+                    <p id="s">4.2/5分</p>
+                    <button class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg" type="button" id="recall">写一条评论</button>
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div id="star">
+                                    <span>星级评论打分</span>
+                                    <ul id="star-list" *ngFor="let star of stars;let i=index;">
+                                        <li class="star"><a href="javascript:;" (click)="changecolor(i)"><img src="{{star.src}}" class="star-png"></a></li>
+                                    </ul>  
+                                    <span id="span">{{grade.grade}}分</span>
+                                    <p id="p"></p>                                 
+                                </div>
+                                <h5>撰写评论</h5>
+                                <form [formGroup]="comment">
+                                    <input type="text" placeholder="在这里评价一下吧！" formControlName="content" class="commentarea">
+                                </form>
+                                <button class="btn btn-primary" data-dismiss="modal" (click)="postComment()">提交</button>
+                            </div>
+                            
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 评论 -->
+            <div >
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                    <th>评论</th>
+                                    <th>星级</th>
+                                    <th>评论时间</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody *ngFor="let comment of allcomment;">
+                            <tr>
+                                    <td>
+                                            {{comment.content}}
+                                    </td>
+                                    <td>
+                                            {{comment.grade}}
+                                    </td>
+                                    <td>
+                                            {{comment.comment_time}}
+                                    </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+        
+        
